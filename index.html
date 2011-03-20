@@ -17,8 +17,15 @@
           $('#intro .details').toggle();
         });
         
+        $('a[href=#intro]').addClass('active');
+        
         $('a[href=#intro]').click(function() {
+          $(this).addClass('active');
+          $('a[href=#types]').removeClass('active');
+          $('a[href=#installation]').removeClass('active');
+          $('a[href=#contact]').removeClass('active');
           $('#installation').hide();
+          $('#installation');
           $('#contact').hide();
           $('#types').hide();
           $('#intro').show();
@@ -26,6 +33,10 @@
         });
         
         $('a[href=#types]').click(function() {
+          $(this).addClass('active');
+          $('a[href=#intro]').removeClass('active');
+          $('a[href=#installation]').removeClass('active');
+          $('a[href=#contact]').removeClass('active');
           $('#intro').hide();
           $('#installation').hide();
           $('#contact').hide();
@@ -34,6 +45,10 @@
         });
         
         $('a[href=#installation]').click(function() {
+          $(this).addClass('active');
+          $('a[href=#intro]').removeClass('active');
+          $('a[href=#types]').removeClass('active');
+          $('a[href=#contact]').removeClass('active');
           $('#intro').hide();
           $('#contact').hide();
           $('#types').hide();
@@ -42,6 +57,10 @@
         });
 
         $('a[href=#contact]').click(function() {
+          $(this).addClass('active');
+          $('a[href=#intro]').removeClass('active');
+          $('a[href=#types]').removeClass('active');
+          $('a[href=#installation]').removeClass('active');
           $('#intro').hide();
           $('#types').hide();
           $('#installation').hide();
@@ -99,6 +118,13 @@
       	border-collapse: collapse;
       	border-spacing: 0;
       }
+      
+      .active {
+        font-weight: bold;
+        text-decoration: none;
+        color: black;
+        cursor: default;
+      }
 
 
       #site {
@@ -152,6 +178,7 @@
       
       #nav li {
         display: inline;
+        padding: 0 0.25em;
       }
       
       #intro .main {
